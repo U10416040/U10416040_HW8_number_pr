@@ -415,16 +415,19 @@ class divide{
 	int compare;
 	int intcont;
 	
+	//this method to know the mod and quotient
 	String knowmod(String a, String b){
 		intcont=1;
 		compare=1;
 		
 		//System.out.println("hi");
+		//to know which number is bigger
 		if(comparestr(a,b)<0){
 			intcont=0;
 			return a;			
 		}
 		
+		//use subtract method
 		cont=sfd.sub(a, b);
 		while(compare>=0){
 			cont=sfd.sub(cont, b);
@@ -437,6 +440,7 @@ class divide{
 		return cont;
 	}
 	
+	//know the mentisa
 	String knowmentisa(String a, String b){
 		String mentisa=new String();
 		compare=1;
@@ -447,6 +451,7 @@ class divide{
 				
 		cont=sfd.sub(a, b);
 		compare=comparestr(cont,b);
+		//the same 
 		while(compare>=0){
 			cont=sfd.sub(cont, b);
 			compare=comparestr(cont,b);			
